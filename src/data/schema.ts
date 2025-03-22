@@ -2,7 +2,10 @@ export type Usage = {
   owner: string
   status: string
   costs: number
+  price: number
+  revenue: number
   region: string
+  name: string
   stability: number
   lastEdited: string
 }

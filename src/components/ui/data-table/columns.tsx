@@ -43,6 +43,17 @@ export const columns = [
       displayName: "Select",
     },
   }),
+  columnHelper.accessor("product_name", {
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Name" />
+    ),
+    enableSorting: true,
+    enableHiding: false,
+    meta: {
+      className: "text-left",
+      displayName: "Name",
+    },
+  }),
   columnHelper.accessor("owner", {
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Owner" />
@@ -78,17 +89,6 @@ export const columns = [
         </Badge>
       )
     },
-  }),
-  columnHelper.accessor("region", {
-    header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Region" />
-    ),
-    enableSorting: false,
-    meta: {
-      className: "text-left",
-      displayName: "Region",
-    },
-    filterFn: "arrIncludesSome",
   }),
   columnHelper.accessor("stability", {
     header: ({ column }) => (
